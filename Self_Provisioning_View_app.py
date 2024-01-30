@@ -1,5 +1,7 @@
 import streamlit as st
 import snowflake.connector
+import pandas
+import requests
 
 # Snowflake connection parameters
 conn_params = {
@@ -10,7 +12,7 @@ conn_params = {
 }
 
 # Connect to Snowflake
-conn = snowflake.connector.connect(**conn_params)
+conn = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 
 # Streamlit app
 st.title("Snowflake Schema Explorer")
