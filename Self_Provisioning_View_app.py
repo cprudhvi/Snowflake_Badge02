@@ -5,14 +5,14 @@ import requests
 
 # Snowflake connection parameters
 conn_params = {
-    'user': 'your_username',
-    'password': 'your_password',
-    'account': 'your_account_url',
-    'warehouse': 'your_warehouse',
+    'user': 'PrudhviCherukuri',
+    'password': 'Cprudhvi@5533',
+    'account': 'https://le34532.eu-north-1.aws.snowflakecomputing.com',
+    'warehouse': 'compute_wh',
 }
 
 # Connect to Snowflake
-conn = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+conn = snowflake.connector.connect(**st.secrets["snowflake"])
 
 # Streamlit app
 st.title("Snowflake Schema Explorer")
